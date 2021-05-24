@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C6C57DD5265BAFC200266036 /* TMDbApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C57DD4265BAFC200266036 /* TMDbApp.swift */; };
-		C6C57DD7265BAFC200266036 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C57DD6265BAFC200266036 /* ContentView.swift */; };
+		C6C57DD7265BAFC200266036 /* PopularMoviesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C57DD6265BAFC200266036 /* PopularMoviesView.swift */; };
 		C6C57DD9265BAFC300266036 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6C57DD8265BAFC300266036 /* Assets.xcassets */; };
 		C6C57DDC265BAFC300266036 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6C57DDB265BAFC300266036 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -16,7 +16,7 @@
 /* Begin PBXFileReference section */
 		C6C57DD1265BAFC200266036 /* TMDb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TMDb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6C57DD4265BAFC200266036 /* TMDbApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDbApp.swift; sourceTree = "<group>"; };
-		C6C57DD6265BAFC200266036 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C6C57DD6265BAFC200266036 /* PopularMoviesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMoviesView.swift; sourceTree = "<group>"; };
 		C6C57DD8265BAFC300266036 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6C57DDB265BAFC300266036 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C6C57DDD265BAFC300266036 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -53,7 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				C6C57DD4265BAFC200266036 /* TMDbApp.swift */,
-				C6C57DD6265BAFC200266036 /* ContentView.swift */,
+				C6C57DD6265BAFC200266036 /* PopularMoviesView.swift */,
 				C6C57DD8265BAFC300266036 /* Assets.xcassets */,
 				C6C57DDD265BAFC300266036 /* Info.plist */,
 				C6C57DDA265BAFC300266036 /* Preview Content */,
@@ -138,7 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6C57DD7265BAFC200266036 /* ContentView.swift in Sources */,
+				C6C57DD7265BAFC200266036 /* PopularMoviesView.swift in Sources */,
 				C6C57DD5265BAFC200266036 /* TMDbApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
