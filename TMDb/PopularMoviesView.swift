@@ -9,24 +9,30 @@ import SwiftUI
 
 struct PopularMoviesView: View {
     
+    @State private var selectedMovie: String? = nil
     @State private var isShowingMovieDetailView = false
-    let movies = Array(1...100).map { "Movie №\($0)" }
+    let movies = ["django", "kong", "1917", "titanic", "joker", "moonlight"]
     let layout = [
-        GridItem(.flexible()),
+        GridItem(.flexible(), spacing: 10),
         GridItem(.flexible())
     ]
     
     var body: some View {
         NavigationView {
             ScrollView {
-                LazyVGrid(columns: layout) {
+                
+                NavigationLink(destination: MovieDetailView(movie: selectedMovie),
+                               isActive: $isShowingMovieDetailView) { EmptyView() }
+                
+                LazyVGrid(columns: layout, spacing: 10) {
                     ForEach(movies, id: \.self) { movie in
-                        
-                        NavigationLink(destination: Text("Movie details"),
-                                       isActive: $isShowingMovieDetailView) {
-                            Rectangle()
-                                .fill(Color(.lightGray))
-                                .frame(minHeight: 200)
+                        Button(action: {
+                            selectedMovie = movie
+                            isShowingMovieDetailView = true
+                        }) {
+                            Image(movie)
+                                .resizable()
+                                .scaledToFill()
                                 .overlay(
                                     HStack {
                                         Spacer()
@@ -35,12 +41,12 @@ struct PopularMoviesView: View {
                                             .foregroundColor(.white)
                                         Spacer()
                                     }
-                                    .background(Color.black.opacity(0.3))
+                                    .background(Color.black)
                                     , alignment: .bottomLeading)
                                 .mask(RoundedRectangle(cornerRadius: 10))
                         }
                     }
-                }.padding()
+                }.padding(10)
                 .navigationTitle("Popular Movies")
             }
         }

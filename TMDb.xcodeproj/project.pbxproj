@@ -11,6 +11,7 @@
 		C6C57DD7265BAFC200266036 /* PopularMoviesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C57DD6265BAFC200266036 /* PopularMoviesView.swift */; };
 		C6C57DD9265BAFC300266036 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6C57DD8265BAFC300266036 /* Assets.xcassets */; };
 		C6C57DDC265BAFC300266036 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6C57DDB265BAFC300266036 /* Preview Assets.xcassets */; };
+		C6C57DE4265BB15B00266036 /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C57DE3265BB15B00266036 /* MovieDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		C6C57DD8265BAFC300266036 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6C57DDB265BAFC300266036 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C6C57DDD265BAFC300266036 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6C57DE3265BB15B00266036 /* MovieDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				C6C57DD8265BAFC300266036 /* Assets.xcassets */,
 				C6C57DDD265BAFC300266036 /* Info.plist */,
 				C6C57DDA265BAFC300266036 /* Preview Content */,
+				C6C57DE3265BB15B00266036 /* MovieDetailView.swift */,
 			);
 			path = TMDb;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6C57DE4265BB15B00266036 /* MovieDetailView.swift in Sources */,
 				C6C57DD7265BAFC200266036 /* PopularMoviesView.swift in Sources */,
 				C6C57DD5265BAFC200266036 /* TMDbApp.swift in Sources */,
 			);
