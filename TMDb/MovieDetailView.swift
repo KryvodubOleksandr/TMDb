@@ -8,18 +8,27 @@
 import SwiftUI
 
 struct MovieDetailView: View {
-    
     let movie: String?
     
     var body: some View {
-            Image(movie ?? "")
-                .resizable()
-                .aspectRatio(contentMode: .fill)
+        ScrollView {
+            VStack {
+                BackdropImageView(movie: movie)
+                DescriptionView()
+                SynopsisView()
+                MainCastView()
+                MainTechnicalTeamView()
+             Spacer()
+                .navigationTitle("Movie details")
+                .navigationBarTitleDisplayMode(.inline)
+                .navigationBarItems(trailing: Image(systemName: "square.and.arrow.up"))
+            }
+        }
     }
 }
 
 struct MovieDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        MovieDetailView(movie: "kong")
+        MovieDetailView(movie: "1917")
     }
 }

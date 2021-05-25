@@ -12,6 +12,11 @@
 		C6C57DD9265BAFC300266036 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6C57DD8265BAFC300266036 /* Assets.xcassets */; };
 		C6C57DDC265BAFC300266036 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6C57DDB265BAFC300266036 /* Preview Assets.xcassets */; };
 		C6C57DE4265BB15B00266036 /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C57DE3265BB15B00266036 /* MovieDetailView.swift */; };
+		C6C57DE7265BE57700266036 /* BackdropImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C57DE6265BE57700266036 /* BackdropImageView.swift */; };
+		C6C57DE9265BE5C000266036 /* SynopsisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C57DE8265BE5C000266036 /* SynopsisView.swift */; };
+		C6C57DEB265BE5F100266036 /* MainCastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C57DEA265BE5F100266036 /* MainCastView.swift */; };
+		C6C57DED265BE62300266036 /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C57DEC265BE62300266036 /* DescriptionView.swift */; };
+		C6C57DEF265BE69200266036 /* MainTechnicalTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C57DEE265BE69200266036 /* MainTechnicalTeamView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		C6C57DDB265BAFC300266036 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C6C57DDD265BAFC300266036 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C6C57DE3265BB15B00266036 /* MovieDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailView.swift; sourceTree = "<group>"; };
+		C6C57DE6265BE57700266036 /* BackdropImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackdropImageView.swift; sourceTree = "<group>"; };
+		C6C57DE8265BE5C000266036 /* SynopsisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynopsisView.swift; sourceTree = "<group>"; };
+		C6C57DEA265BE5F100266036 /* MainCastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCastView.swift; sourceTree = "<group>"; };
+		C6C57DEC265BE62300266036 /* DescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionView.swift; sourceTree = "<group>"; };
+		C6C57DEE265BE69200266036 /* MainTechnicalTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTechnicalTeamView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +66,15 @@
 			children = (
 				C6C57DD4265BAFC200266036 /* TMDbApp.swift */,
 				C6C57DD6265BAFC200266036 /* PopularMoviesView.swift */,
+				C6C57DE3265BB15B00266036 /* MovieDetailView.swift */,
+				C6C57DEC265BE62300266036 /* DescriptionView.swift */,
+				C6C57DE6265BE57700266036 /* BackdropImageView.swift */,
+				C6C57DE8265BE5C000266036 /* SynopsisView.swift */,
+				C6C57DEA265BE5F100266036 /* MainCastView.swift */,
+				C6C57DEE265BE69200266036 /* MainTechnicalTeamView.swift */,
 				C6C57DD8265BAFC300266036 /* Assets.xcassets */,
 				C6C57DDD265BAFC300266036 /* Info.plist */,
 				C6C57DDA265BAFC300266036 /* Preview Content */,
-				C6C57DE3265BB15B00266036 /* MovieDetailView.swift */,
 			);
 			path = TMDb;
 			sourceTree = "<group>";
@@ -141,8 +156,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6C57DEF265BE69200266036 /* MainTechnicalTeamView.swift in Sources */,
+				C6C57DEB265BE5F100266036 /* MainCastView.swift in Sources */,
+				C6C57DED265BE62300266036 /* DescriptionView.swift in Sources */,
+				C6C57DE9265BE5C000266036 /* SynopsisView.swift in Sources */,
 				C6C57DE4265BB15B00266036 /* MovieDetailView.swift in Sources */,
 				C6C57DD7265BAFC200266036 /* PopularMoviesView.swift in Sources */,
+				C6C57DE7265BE57700266036 /* BackdropImageView.swift in Sources */,
 				C6C57DD5265BAFC200266036 /* TMDbApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
