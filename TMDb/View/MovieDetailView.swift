@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MovieDetailView: View {
-    let movie: String?
+    let movie: Movie?
     
     var body: some View {
         ScrollView {
@@ -29,6 +29,6 @@ struct MovieDetailView: View {
 
 struct MovieDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        MovieDetailView(movie: "1917")
+        MovieDetailView(movie: TestData.movies[0])
     }
 }

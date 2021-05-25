@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct PopularMoviesView: View {
-    
-    @State private var selectedMovie: String? = nil
+    let popularMovies = PopularMoviesViewModel()
+    @State private var selectedMovie: Movie?
     @State private var isShowingMovieDetailView = false
-    let movies = ["django", "kong", "1917", "titanic", "joker", "moonlight"]
+
     let layout = [
         GridItem(.flexible(), spacing: 10),
         GridItem(.flexible())
@@ -25,18 +25,18 @@ struct PopularMoviesView: View {
                                isActive: $isShowingMovieDetailView) { EmptyView() }
                 
                 LazyVGrid(columns: layout, spacing: 10) {
-                    ForEach(movies, id: \.self) { movie in
+                    ForEach(popularMovies.movies, id: \.title) { movie in
                         Button(action: {
                             selectedMovie = movie
                             isShowingMovieDetailView = true
                         }) {
-                            Image(movie)
+                            Image(movie.posterPath ?? "")
                                 .resizable()
                                 .scaledToFill()
                                 .overlay(
                                     HStack {
                                         Spacer()
-                                        Text(movie)
+                                        Text(movie.title)
                                             .padding(5)
                                             .foregroundColor(.white)
                                         Spacer()

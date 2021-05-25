@@ -8,23 +8,22 @@
 import SwiftUI
 
 struct BackdropImageView: View {
-    let movie: String?
+    let movie: Movie?
     var body: some View {
         ZStack {
             Rectangle()
-            Image(movie ?? "")
+            Image(movie?.posterPath ?? "")
                 .resizable()
                 .scaledToFit()
             VStack(alignment: .leading) {
                 Spacer()
-                Text(movie ?? "")
+                Text(movie?.title ?? "")
                     .font(.title)
                     .bold()
                     .foregroundColor(.white)
                 HStack {
-                    ForEach((1...5), id: \.self) { _ in
-                        Image(systemName: "star.fill")
-                    }
+                    Image(systemName: "star.fill")
+                    Text(String(movie?.voteAverage ?? 0))
                     Spacer()
                 }
             .font(.title2)
@@ -37,6 +36,6 @@ struct BackdropImageView: View {
 
 struct BackdropImageView_Previews: PreviewProvider {
     static var previews: some View {
-        BackdropImageView(movie: "1917")
+        BackdropImageView(movie: TestData.movies[0])
     }
 }
