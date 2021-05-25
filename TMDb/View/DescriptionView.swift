@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct DescriptionView: View {
+    let language: String
     var body: some View {
         HStack {
             VStack(alignment: .leading, spacing: 8) {
@@ -27,7 +28,7 @@ struct DescriptionView: View {
             VStack(alignment: .leading, spacing: 8) {
                 Text("Language")
                     .font(.title2)
-                Text("English")
+                Text(language)
                     .foregroundColor(.secondary)
             }
         }.padding()
@@ -36,6 +37,6 @@ struct DescriptionView: View {
 
 struct DescriptionView_Previews: PreviewProvider {
     static var previews: some View {
-        DescriptionView()
+        DescriptionView(language: TestData.movies[0].originalLanguage)
     }
 }

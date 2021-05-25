@@ -9,12 +9,12 @@ import SwiftUI
 
 struct SynopsisView: View {
     @State private var isReadingMore = false
-    let synopsisText = "bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla "
+    let synopsis: String
     var body: some View {
             VStack(alignment: .leading, spacing: 8) {
                 Text("Synopsis")
                     .font(.title2)
-                Text(synopsisText)
+                Text(synopsis)
                     .foregroundColor(.secondary)
                     .lineLimit(isReadingMore ? .max : 3)
                 HStack {
@@ -31,6 +31,6 @@ struct SynopsisView: View {
 
 struct SynopsisView_Previews: PreviewProvider {
     static var previews: some View {
-        SynopsisView()
+        SynopsisView(synopsis: TestData.movies[0].overview)
     }
 }

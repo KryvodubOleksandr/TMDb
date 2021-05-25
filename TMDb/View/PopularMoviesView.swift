@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PopularMoviesView: View {
-    let popularMovies = PopularMoviesViewModel()
+    @ObservedObject var popularMovies = PopularMoviesViewModel()
     @State private var selectedMovie: Movie?
     @State private var isShowingMovieDetailView = false
 
