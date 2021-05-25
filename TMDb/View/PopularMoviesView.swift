@@ -35,9 +35,9 @@ struct PopularMoviesView: View {
                                 .scaledToFill()
                                 .overlay(
                                     HStack {
-                                        Spacer()
                                         Text(movie.title)
-                                            .padding(5)
+                                            .bold()
+                                            .padding(8)
                                             .foregroundColor(.white)
                                         Spacer()
                                     }

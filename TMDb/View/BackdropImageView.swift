@@ -23,7 +23,11 @@ struct BackdropImageView: View {
                     .foregroundColor(.white)
                 HStack {
                     Image(systemName: "star.fill")
+                        .font(.title3)
+                        .foregroundColor(.yellow)
                     Text(String(movie?.voteAverage ?? 0))
+                        .font(.title2)
+                        .bold()
                     Spacer()
                 }
             .font(.title2)
