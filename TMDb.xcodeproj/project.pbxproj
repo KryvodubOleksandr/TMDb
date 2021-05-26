@@ -17,6 +17,7 @@
 		C691A905265E48D400F98E88 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = C691A904265E48D400F98E88 /* Token.swift */; };
 		C691A907265E4C2000F98E88 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C691A906265E4C2000F98E88 /* LoginView.swift */; };
 		C691A909265E4D7000F98E88 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = C691A908265E4D7000F98E88 /* Session.swift */; };
+		C691A90B265E6C8500F98E88 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = C691A90A265E6C8500F98E88 /* API.swift */; };
 		C6C57DD5265BAFC200266036 /* TMDbApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C57DD4265BAFC200266036 /* TMDbApp.swift */; };
 		C6C57DD7265BAFC200266036 /* PopularMoviesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C57DD6265BAFC200266036 /* PopularMoviesView.swift */; };
 		C6C57DD9265BAFC300266036 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6C57DD8265BAFC300266036 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 		C691A904265E48D400F98E88 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		C691A906265E4C2000F98E88 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		C691A908265E4D7000F98E88 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		C691A90A265E6C8500F98E88 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		C6C57DD1265BAFC200266036 /* TMDb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TMDb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6C57DD4265BAFC200266036 /* TMDbApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDbApp.swift; sourceTree = "<group>"; };
 		C6C57DD6265BAFC200266036 /* PopularMoviesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMoviesView.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 			children = (
 				C691A8F3265D3D8F00F98E88 /* MovieRequest.swift */,
 				C691A8FE265E45C700F98E88 /* LoginRequest.swift */,
+				C691A90A265E6C8500F98E88 /* API.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C691A8FF265E45C700F98E88 /* LoginRequest.swift in Sources */,
+				C691A90B265E6C8500F98E88 /* API.swift in Sources */,
 				C691A8FD265E03F300F98E88 /* MovieDetailsViewModel.swift in Sources */,
 				C691A8F4265D3D8F00F98E88 /* MovieRequest.swift in Sources */,
 				C6C57DEB265BE5F100266036 /* ProductionCompaniesView.swift in Sources */,

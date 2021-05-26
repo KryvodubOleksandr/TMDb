@@ -21,7 +21,7 @@ enum SessionRequestError: Error {
 struct LoginRequest {
     
     func getToken(completion: @escaping (Result<Token, TokenRequestError>) -> Void) {
-        guard let url = URL(string: "https://api.themoviedb.org/3/authentication/token/new?api_key=768f4b63117e6e807040e11b15a260a4") else {
+        guard let url = URL(string: "https://api.themoviedb.org/3/authentication/token/new" + API.key) else {
             fatalError("Unable to create URL")
         }
         let request = URLRequest(url: url)
@@ -41,7 +41,7 @@ struct LoginRequest {
     
     func validateToken(username: String, password: String, token: String, completion: @escaping (Result<Token, TokenRequestError>) -> Void) {
         let login = Login(username: username, password: password, requestToken: token)
-        guard let url = URL(string: "https://api.themoviedb.org/3/authentication/token/validate_with_login?api_key=768f4b63117e6e807040e11b15a260a4") else {
+        guard let url = URL(string: "https://api.themoviedb.org/3/authentication/token/validate_with_login" + API.key) else {
             fatalError("Unable to create URL")
         }
         guard let data = try? JSONEncoder().encode(login) else {
@@ -75,7 +75,7 @@ struct LoginRequest {
     
     func getSession(with token: String, completion: @escaping (Result<Session, SessionRequestError>) -> Void) {
         let requestToken = Session.Create(requestToken: token)
-        guard let url = URL(string: "https://api.themoviedb.org/3/authentication/session/new?api_key=768f4b63117e6e807040e11b15a260a4") else {
+        guard let url = URL(string: "https://api.themoviedb.org/3/authentication/session/new" + API.key) else {
             fatalError("Unable to create URL")
         }
         guard let data = try? JSONEncoder().encode(requestToken) else {

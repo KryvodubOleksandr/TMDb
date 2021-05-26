@@ -17,10 +17,7 @@ struct MovieRequest {
     let baseURL = "https://api.themoviedb.org/3/movie/"
     
     func getPopularMovies(completion: @escaping (Result<MovieList, MovieRequestError>) -> Void) {
-        guard let apiKey = ProcessInfo.processInfo.environment["api_key"] else {
-            fatalError("Unable to read api_key from environment")
-        }
-        let path = baseURL + "popular" + "?api_key=" + apiKey
+        let path = baseURL + "popular" + API.key
         guard let url = URL(string: path) else {
             fatalError("Unable to create URL")
         }
@@ -40,10 +37,7 @@ struct MovieRequest {
     }
     
     func getDetails(with movieID: Int, completion: @escaping (Result<MovieDetails, MovieRequestError>) -> Void) {
-        guard let apiKey = ProcessInfo.processInfo.environment["api_key"] else {
-            fatalError("Unable to read api_key from environment")
-        }
-        let path = baseURL + String(movieID) + "?api_key=" + apiKey
+        let path = baseURL + String(movieID) + API.key
         guard let url = URL(string: path) else {
             fatalError("Unable to create URL")
         }
