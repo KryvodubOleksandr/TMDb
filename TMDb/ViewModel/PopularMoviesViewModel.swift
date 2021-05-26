@@ -9,13 +9,13 @@ import Foundation
 
 final class PopularMoviesViewModel: ObservableObject {
     @Published var movies: [Movie] = []
-    var movieRequest = MovieRequest()
+    private var movieRequest = MovieRequest()
     
     init() {
         get()
     }
     
-    func get() {
+    private func get() {
         movieRequest.getPopularMovies { [weak self] result in
             switch result {
             case .failure:

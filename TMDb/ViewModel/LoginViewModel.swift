@@ -9,15 +9,19 @@ import Foundation
 
 final class LoginViewModel: ObservableObject {
     @Published var isNotLoggedIn = true
-    var token: Token?
-    var session: Session?
-    var loginRequest = LoginRequest()
+    private var token: Token?
+    private var session: Session?
+    private var loginRequest = LoginRequest()
     
     init() {
         getToken()
     }
     
-    func getToken() {
+    func getTokenValue() -> String? {
+        self.token?.requestToken
+    }
+    
+    private func getToken() {
         loginRequest.getToken { result in
             switch result {
             case .failure:
@@ -45,7 +49,7 @@ final class LoginViewModel: ObservableObject {
         }
     }
     
-    func getSession(with token: String) {
+    private func getSession(with token: String) {
         loginRequest.getSession(with: token) { result in
             switch result {
             case .failure:

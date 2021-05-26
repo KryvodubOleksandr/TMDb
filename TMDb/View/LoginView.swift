@@ -13,7 +13,6 @@ struct LoginView: View {
     @State private var password = "weAreLaunching"
     var body: some View {
         VStack(alignment: .leading) {
-            Spacer()
             Text("USERNAME")
                 .foregroundColor(.secondary)
             TextField("Username", text: $username)
@@ -31,8 +30,8 @@ struct LoginView: View {
             HStack {
                 Spacer()
                 Button(action: {
-                    if login.token != nil {
-                        login.validateToken(username: username, password: password, token: login.token!.requestToken)
+                    if login.getTokenValue() != nil {
+                        login.validateToken(username: username, password: password, token: login.getTokenValue()!)
                     }
                 }) {
                     Text("LOGIN")
