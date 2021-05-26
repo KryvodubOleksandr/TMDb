@@ -10,19 +10,21 @@ import SwiftUI
 struct LoginView: View {
     @EnvironmentObject var login: LoginViewModel
     @State private var username = "KryvodubOleksandr"
-    @State private var password = "tmdbChemburizio"
+    @State private var password = "weAreLaunching"
     var body: some View {
         VStack(alignment: .leading) {
             Spacer()
             Text("USERNAME")
                 .foregroundColor(.secondary)
             TextField("Username", text: $username)
+                .autocapitalization(.none)
                 .padding()
                 .background(Color(.systemGray5))
                 .mask(RoundedRectangle(cornerRadius: 8))
             Text("PASSWORD")
                 .foregroundColor(.secondary)
             TextField("Password", text: $password)
+                .autocapitalization(.none)
                 .padding()
                 .background(Color(.systemGray5))
                 .mask(RoundedRectangle(cornerRadius: 8))
