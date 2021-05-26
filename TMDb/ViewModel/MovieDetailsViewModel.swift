@@ -23,6 +23,9 @@ final class MovieDetailsViewModel: ObservableObject {
     var duration: String {
         movie?.duration ?? ""
     }
+    var productionCompanies: [Company] {
+        movie?.productionCompanies ?? []
+    }
     
     func get(with movieID: Int?) {
         guard let id = movieID else {
