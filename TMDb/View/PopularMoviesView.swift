@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwURL
 
 struct PopularMoviesView: View {
     @ObservedObject var popularMovies = PopularMoviesViewModel()
@@ -30,8 +31,7 @@ struct PopularMoviesView: View {
                             selectedMovie = movie
                             isShowingMovieDetailView = true
                         }) {
-                            Image(movie.posterPath ?? "")
-                                .resizable()
+                            RemoteImageView(url: URL(string: movie.posterPathString) ?? URL(string: "https://")!)
                                 .scaledToFill()
                                 .overlay(
                                     HStack {
@@ -41,7 +41,7 @@ struct PopularMoviesView: View {
                                             .foregroundColor(.white)
                                         Spacer()
                                     }
-                                    .background(Color.black)
+                                    .background(Color.black.opacity(0.5))
                                     , alignment: .bottomLeading)
                                 .mask(RoundedRectangle(cornerRadius: 10))
                         }

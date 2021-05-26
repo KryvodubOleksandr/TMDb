@@ -16,6 +16,12 @@ struct Movie: Decodable {
     let title: String
     let backdropPath: String?
     let voteAverage: Double
+    var posterPathString: String {
+        "https://www.themoviedb.org/t/p/w1280" + (posterPath ?? "")
+    }
+    var backdropPathString: String {
+        "https://www.themoviedb.org/t/p/w1280" + (backdropPath ?? "")
+    }
     
     enum CodingKeys: String, CodingKey {
         case posterPath = "poster_path"

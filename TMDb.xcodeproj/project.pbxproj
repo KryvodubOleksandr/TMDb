@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		C691A8F4265D3D8F00F98E88 /* MovieRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C691A8F3265D3D8F00F98E88 /* MovieRequest.swift */; };
+		C691A8F9265DF68E00F98E88 /* SwURL in Frameworks */ = {isa = PBXBuildFile; productRef = C691A8F8265DF68E00F98E88 /* SwURL */; };
 		C6C57DD5265BAFC200266036 /* TMDbApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C57DD4265BAFC200266036 /* TMDbApp.swift */; };
 		C6C57DD7265BAFC200266036 /* PopularMoviesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C57DD6265BAFC200266036 /* PopularMoviesView.swift */; };
 		C6C57DD9265BAFC300266036 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6C57DD8265BAFC300266036 /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C691A8F9265DF68E00F98E88 /* SwURL in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +149,9 @@
 			dependencies = (
 			);
 			name = TMDb;
+			packageProductDependencies = (
+				C691A8F8265DF68E00F98E88 /* SwURL */,
+			);
 			productName = TMDb;
 			productReference = C6C57DD1265BAFC200266036 /* TMDb.app */;
 			productType = "com.apple.product-type.application";
@@ -174,6 +179,9 @@
 				Base,
 			);
 			mainGroup = C6C57DC8265BAFC200266036;
+			packageReferences = (
+				C691A8F7265DF68E00F98E88 /* XCRemoteSwiftPackageReference "SwURL" */,
+			);
 			productRefGroup = C6C57DD2265BAFC200266036 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -400,6 +408,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C691A8F7265DF68E00F98E88 /* XCRemoteSwiftPackageReference "SwURL" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/cmtrounce/SwURL";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C691A8F8265DF68E00F98E88 /* SwURL */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C691A8F7265DF68E00F98E88 /* XCRemoteSwiftPackageReference "SwURL" */;
+			productName = SwURL;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C6C57DC9265BAFC200266036 /* Project object */;
 }

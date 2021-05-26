@@ -13,7 +13,7 @@ struct MovieDetailView: View {
     var body: some View {
         ScrollView {
             VStack {
-                BackdropImageView(backdropPath: movie?.backdropPath ?? "", title: movie?.title ?? "", voteAverage: movie?.voteAverage ?? 0)
+                BackdropImageView(backdropPath: movie?.backdropPathString ?? "", title: movie?.title ?? "", voteAverage: movie?.voteAverage ?? 0)
                 DescriptionView(language: movie?.originalLanguage ?? "")
                 SynopsisView(synopsis: movie?.overview ?? "")
                 MainCastView()

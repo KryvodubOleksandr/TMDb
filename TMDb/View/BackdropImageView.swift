@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwURL
 
 struct BackdropImageView: View {
     let backdropPath: String
@@ -14,9 +15,8 @@ struct BackdropImageView: View {
     var body: some View {
         ZStack {
             Rectangle()
-            Image(backdropPath)
-                .resizable()
-                .scaledToFit()
+            RemoteImageView(url: (URL(string: backdropPath) ?? URL(string: "https://")!))
+                .scaledToFill()
             VStack(alignment: .leading) {
                 Spacer()
                 Text(title)
