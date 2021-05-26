@@ -14,25 +14,25 @@ struct PopularMoviesView: View {
     @State private var isShowingMovieDetailView = false
 
     let layout = [
-        GridItem(.flexible(), spacing: 10),
+        GridItem(.flexible(), spacing: 12),
         GridItem(.flexible())
     ]
     
     var body: some View {
         NavigationView {
-            ScrollView {
+            ScrollView(showsIndicators: false) {
                 
                 NavigationLink(destination: MovieDetailView(movie: selectedMovie),
                                isActive: $isShowingMovieDetailView) { EmptyView() }
                 
-                LazyVGrid(columns: layout, spacing: 10) {
+                LazyVGrid(columns: layout, spacing: 12) {
                     ForEach(popularMovies.movies, id: \.title) { movie in
                         Button(action: {
                             selectedMovie = movie
                             isShowingMovieDetailView = true
                         }) {
                             RemoteImageView(url: URL(string: movie.posterPathString) ?? URL(string: "https://")!)
-                                .scaledToFill()
+                                .scaledToFit()
                                 .overlay(
                                     HStack {
                                         Text(movie.title)
@@ -43,10 +43,12 @@ struct PopularMoviesView: View {
                                     }
                                     .background(Color.black.opacity(0.5))
                                     , alignment: .bottomLeading)
-                                .mask(RoundedRectangle(cornerRadius: 10))
                         }
+                        .mask(RoundedRectangle(cornerRadius: 10))
+                        .shadow(color: Color(.quaternaryLabel), radius: 1, x: 1, y: 1)
+                        .shadow(color: Color(.quaternaryLabel), radius: 1, x: -1, y: -1)
                     }
-                }.padding(10)
+                }.padding(12)
                 .navigationTitle("Popular Movies")
             }
         }

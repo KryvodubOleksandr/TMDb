@@ -14,7 +14,7 @@ struct BackdropImageView: View {
     let voteAverage: Double
     var body: some View {
         ZStack {
-            Rectangle()
+            Color.clear
             RemoteImageView(url: (URL(string: backdropPath) ?? URL(string: "https://")!))
                 .scaledToFill()
             VStack(alignment: .leading) {
