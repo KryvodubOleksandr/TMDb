@@ -22,7 +22,6 @@
 		C6C57DED265BE62300266036 /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C57DEC265BE62300266036 /* DescriptionView.swift */; };
 		C6C57DF4265CC8CA00266036 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C57DF3265CC8CA00266036 /* Movie.swift */; };
 		C6C57DF6265CCABA00266036 /* PopularMoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C57DF5265CCABA00266036 /* PopularMoviesViewModel.swift */; };
-		C6C57DF9265CD24300266036 /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C57DF8265CD24300266036 /* TestData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,7 +41,6 @@
 		C6C57DEC265BE62300266036 /* DescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionView.swift; sourceTree = "<group>"; };
 		C6C57DF3265CC8CA00266036 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		C6C57DF5265CCABA00266036 /* PopularMoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMoviesViewModel.swift; sourceTree = "<group>"; };
-		C6C57DF8265CD24300266036 /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,7 +128,6 @@
 		C6C57DF7265CD22600266036 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				C6C57DF8265CD24300266036 /* TestData.swift */,
 				C691A8F3265D3D8F00F98E88 /* MovieRequest.swift */,
 			);
 			path = Utilities;
@@ -212,7 +209,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C691A8FD265E03F300F98E88 /* MovieDetailsViewModel.swift in Sources */,
-				C6C57DF9265CD24300266036 /* TestData.swift in Sources */,
 				C691A8F4265D3D8F00F98E88 /* MovieRequest.swift in Sources */,
 				C6C57DEB265BE5F100266036 /* ProductionCompaniesView.swift in Sources */,
 				C691A8FB265E03D000F98E88 /* MovieDetails.swift in Sources */,

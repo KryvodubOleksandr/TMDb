@@ -35,9 +35,3 @@ struct ProductionCompaniesView: View {
         }.padding()
     }
 }
-
-struct MainCastView_Previews: PreviewProvider {
-    static var previews: some View {
-        ProductionCompaniesView()
-    }
-}

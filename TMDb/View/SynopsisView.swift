@@ -29,9 +29,3 @@ struct SynopsisView: View {
             }.padding()
     }
 }
-
-struct SynopsisView_Previews: PreviewProvider {
-    static var previews: some View {
-        SynopsisView(synopsis: TestData.movies[0].overview)
-    }
-}
