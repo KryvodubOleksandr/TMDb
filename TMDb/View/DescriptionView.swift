@@ -8,20 +8,23 @@
 import SwiftUI
 
 struct DescriptionView: View {
+    @EnvironmentObject var movieDetails: MovieDetailsViewModel
     let language: String
     var body: some View {
-        HStack {
+        HStack(alignment: .top) {
             VStack(alignment: .leading, spacing: 8) {
                 Text("Duration")
                     .font(.title2)
-                Text("1h 50m")
+                Text(movieDetails.duration)
+                    .font(.callout)
                     .foregroundColor(.secondary)
             }
             Spacer()
             VStack(alignment: .leading, spacing: 8) {
                 Text("Genre")
                     .font(.title2)
-                Text("Drama, Music")
+                Text(movieDetails.genres)
+                    .font(.callout)
                     .foregroundColor(.secondary)
             }
             Spacer()
@@ -29,14 +32,9 @@ struct DescriptionView: View {
                 Text("Language")
                     .font(.title2)
                 Text(language)
+                    .font(.callout)
                     .foregroundColor(.secondary)
             }
         }.padding()
-    }
-}
-
-struct DescriptionView_Previews: PreviewProvider {
-    static var previews: some View {
-        DescriptionView(language: TestData.movies[0].originalLanguage)
     }
 }

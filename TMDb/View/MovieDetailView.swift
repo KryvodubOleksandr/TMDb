@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct MovieDetailView: View {
+    @StateObject var movieDetails = MovieDetailsViewModel()
     let movie: Movie?
     
     var body: some View {
         ScrollView {
             VStack {
-                BackdropImageView(backdropPath: movie?.backdropPathString ?? "", title: movie?.title ?? "", voteAverage: movie?.voteAverage ?? 0)
-                DescriptionView(language: movie?.originalLanguage ?? "")
+                BackdropImageView(backdropPath: movie?.backdropPathString ?? "", voteAverage: movie?.voteAverage ?? 0)
+                DescriptionView(language: movie?.language ?? "")
                 SynopsisView(synopsis: movie?.overview ?? "")
                 MainCastView()
                 MainTechnicalTeamView()
@@ -23,6 +24,10 @@ struct MovieDetailView: View {
                 .navigationBarTitleDisplayMode(.inline)
                 .navigationBarItems(trailing: Image(systemName: "square.and.arrow.up"))
             }
+            .onAppear {
+                movieDetails.get(with: movie?.id)
+            }
+            .environmentObject(movieDetails)
         }
     }
 }

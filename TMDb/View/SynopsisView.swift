@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct SynopsisView: View {
-    @State private var isReadingMore = false
+    @EnvironmentObject var movieDetails: MovieDetailsViewModel
     let synopsis: String
+    @State private var isReadingMore = false
     var body: some View {
             VStack(alignment: .leading, spacing: 8) {
                 Text("Synopsis")

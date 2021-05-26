@@ -22,6 +22,16 @@ struct Movie: Decodable {
     var backdropPathString: String {
         "https://www.themoviedb.org/t/p/w1280" + (backdropPath ?? "")
     }
+    var language: String {
+        switch originalLanguage {
+            case "en": return "English"
+            case "fr": return "French"
+            case "nl": return "Dutch"
+            case "ja": return "Japanese"
+            case "ko": return "Korean"
+            default: return "Other"
+        }
+    }
     
     enum CodingKeys: String, CodingKey {
         case posterPath = "poster_path"
