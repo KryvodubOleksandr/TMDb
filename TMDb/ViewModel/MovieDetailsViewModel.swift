@@ -8,9 +8,8 @@
 import Foundation
 
 final class MovieDetailsViewModel: ObservableObject {
-    @Published var movieRequest = MovieRequest()
     @Published var movie: MovieDetails?
-    
+    var movieRequest = MovieRequest()
     var title: String {
         movie?.title ?? ""
     }

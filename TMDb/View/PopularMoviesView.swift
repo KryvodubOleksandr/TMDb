@@ -9,10 +9,11 @@ import SwiftUI
 import SwURL
 
 struct PopularMoviesView: View {
-    @ObservedObject var popularMovies = PopularMoviesViewModel()
+    @StateObject var popularMovies = PopularMoviesViewModel()
+    @StateObject var login = LoginViewModel()
     @State private var selectedMovie: Movie?
     @State private var isShowingMovieDetailView = false
-
+    
     let layout = [
         GridItem(.flexible(), spacing: 12),
         GridItem(.flexible())
@@ -48,9 +49,14 @@ struct PopularMoviesView: View {
                         .shadow(color: Color(.quaternaryLabel), radius: 1, x: 1, y: 1)
                         .shadow(color: Color(.quaternaryLabel), radius: 1, x: -1, y: -1)
                     }
-                }.padding(12)
+                }
+                .padding(12)
                 .navigationTitle("Popular Movies")
+                .fullScreenCover(isPresented: $login.isNotLoggedIn, content: {
+                    LoginView()
+                })
             }
         }
+        .environmentObject(login)
     }
 }

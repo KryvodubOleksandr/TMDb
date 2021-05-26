@@ -8,8 +8,8 @@
 import Foundation
 
 final class PopularMoviesViewModel: ObservableObject {
-    @Published var movieRequest = MovieRequest()
     @Published var movies: [Movie] = []
+    var movieRequest = MovieRequest()
     
     init() {
         get()
