@@ -13,6 +13,15 @@ struct LoginView: View {
     @State private var password = "weAreLaunching"
     var body: some View {
         VStack(alignment: .leading) {
+            HStack {
+                Spacer()
+                Image("TMDb")
+                    .resizable()
+                    .scaledToFit()
+                    .mask(RoundedRectangle(cornerRadius: 8))
+                    .frame(width: 180, height: 180, alignment: .center)
+                Spacer()
+            }
             Text("USERNAME")
                 .foregroundColor(.secondary)
             TextField("Username", text: $username)
